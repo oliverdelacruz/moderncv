@@ -43,7 +43,7 @@
 
 % commands
 \@initializecommand{\makeheaddetailssymbol}{%
-    {~~~{\rmfamily|}~~~}}% the \rmfamily is required to force Latin Modern fonts when using sans serif, as OMS/lmss/m/n is not defined and gets substituted by OMS/cmsy/m/n
+    {~~{\rmfamily\textbullet}~~}}% the \rmfamily is required to force Latin Modern fonts when using sans serif, as OMS/lmss/m/n is not defined and gets substituted by OMS/cmsy/m/n
 %   internal command to add an element to the footer
 %   it collects the elements in a temporary box, and checks when to flush the box
 \@initializebox{\makeheaddetailsbox}%
@@ -69,30 +69,30 @@
     \settowidth{\makeheaddetailsboxwidth}{\usebox{\makeheaddetailsbox}}%
     \@firstmakeheaddetailselementfalse\fi}
 %   internal command to flush the makehead
-\@initializecommand{\flushmakeheaddetails}{%
+\@initializecommand{\flushmakeheaddetails}{%S
   \strut\usebox{\makeheaddetailsbox}%
   \savebox{\makeheaddetailsbox}{}%
   \savebox{\makeheaddetailstempbox}{}%
   \setlength{\makeheaddetailsboxwidth}{0pt}}
 \@initializecommand{\makehead}{%
-  \setlength{\makeheaddetailswidth}{0.8\textwidth}%
-  \hfil%
+  \setlength{\makeheaddetailswidth}{0.80\textwidth}%
+  \hfil%S
   \parbox{\makeheaddetailswidth}{%
     \centering%
     % name and title
     \namestyle{\@firstname~\@lastname}%
-    \ifthenelse{\equal{\@title}{}}{}{\titlestyle{~|~\@title}}\\% \isundefined doesn't work on \@title, as LaTeX itself defines \@title (before it possibly gets redefined by \title) 
+    \ifthenelse{\equal{\@title}{}}{}{\titlestyle{~{\normalfont |} \@title}}\\% \isundefined doesn't work on \@title, as LaTeX itself defines \@title (before it possibly gets redefined by \title) 
     % optional detailed information
     \if@details{%
       \addressfont\color{color2}%
-      \ifthenelse{\isundefined{\@addressstreet}}{}{\addtomakeheaddetails{\addresssymbol\@addressstreet}%
+      \ifthenelse{\isundefined{\@addressstreet}}{}{\vspace{2px}\addtomakeheaddetails{\addresssymbol ~\@addressstreet}%
         \ifthenelse{\equal{\@addresscity}{}}{}{\addtomakeheaddetails[~--~]{\@addresscity}}% if \addresstreet is defined, \addresscity and \addresscountry will always be defined but could be empty
         \ifthenelse{\equal{\@addresscountry}{}}{}{\addtomakeheaddetails[~--~]{\@addresscountry}}%
-        \flushmakeheaddetails\@firstmakeheaddetailselementtrue\\}%
+        }%
+	   \ifthenelse{\isundefined{\@email}}{}{\addtomakeheaddetails{\emailsymbol\emaillink{\@email}}
+	   }%
       \collectionloop{phones}{% the key holds the phone type (=symbol command prefix), the item holds the number
         \addtomakeheaddetails{\csname\collectionloopkey phonesymbol\endcsname\collectionloopitem}}%
-      \ifthenelse{\isundefined{\@email}}{}{\addtomakeheaddetails{\emailsymbol\emaillink{\@email}}
-	   \flushmakeheaddetails\@firstmakeheaddetailselementtrue\\}%
       \ifthenelse{\isundefined{\@homepage}}{}{\addtomakeheaddetails{\homepagesymbol\httplink{\@homepage}}}%
       \collectionloop{socials}{% the key holds the social type (=symbol command prefix), the item holds the link
         \addtomakeheaddetails{\csname\collectionloopkey socialsymbol\endcsname\collectionloopitem}}%

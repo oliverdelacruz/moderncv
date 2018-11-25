@@ -119,7 +119,7 @@
   \RequirePackage[unicode]{hyperref}% unicode is required for unicode pdf metadata
   \hypersetup{
     breaklinks,
-    baseurl       = http://,
+    baseurl       = https://,
     pdfborder     = 0 0 0,
     pdfpagemode   = \pdfpagemode,
     pdfstartpage  = 1,
