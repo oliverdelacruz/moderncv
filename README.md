@@ -1,4 +1,4 @@
-# ModernCV - 
+# ModernCV 
 
 A template used to generate my CV. 
 
