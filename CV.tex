@@ -25,12 +25,8 @@
 \documentclass[11pt,a4paper,sans]{moderncv}   
 \moderncvstyle{banking}                        
 \moderncvcolor{blue}   
-\usepackage[scale=0.8,left = 1.25cm,right = 1.25cm,bmargin=0.75cm,tmargin= 0.75cm]{geometry}
+\usepackage[scale=0.8,left = 1.25cm,right = 1.25cm,bmargin=1cm,tmargin= 1cm]{geometry}
 \usepackage{eurosym}
-\usepackage{babel}
-\usepackage{smartdiagram}
-\usepackage{multicol}
-\usepackage{vwcol}
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 \usepackage[utf8]{inputenc}
 \renewcommand*{\namefont}{\huge\mdseries\upshape}
@@ -39,282 +35,141 @@
 \renewcommand*{\quotefont}{\large\slshape}
 \renewcommand*{\sectionfont}{\Large\mdseries\upshape}
 \renewcommand*{\subsectionfont}{\large\mdseries\upshape}
-
-% Override default settings
-\definecolor{color1}{rgb}{0.22,0.45,0.70}% light blue
-\renewcommand{\labelitemi}{\color{color1}{\large\rmfamily\textbullet}} 
-\nopagenumbers
-\smartdiagramset{
-	% set center bubble color
-	bubble center node color = cyan,
-	% define the list of colors usable in the diagram
-	set color list = {cyan!40, cyan!40, cyan!40, cyan!40, cyan!40, cyan!40, cyan!40,
-	cyan!40, cyan!40, cyan!40},
-	% sets the opacity at which the bubbles are shown
-	bubble fill opacity = 0.6,
-	% sets the opacity at which the bubble text is shown
-	bubble text opacity = 0.8,
-}
-
+\renewcommand*{\hintfont}{}
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 \firstname{Oliver} % Your first name
 \familyname{De La Cruz} % Your last name
 
-% Additional information in this block 
+% All information in this block is optional, comment out any lines you don't need
 \title{Data Scientist}
-\address{13 Jean-Pierre Sauvage}{2514}{Luxembourg}
+\address{13, Rue Jean-Pierre Sauvage}{L-2514 Luxembourg}
 \email{o.delacruzceballos@gmail.com}
-\phone{(+352) 691 14 08 89}
-
-% All information in this block is optional, 
-%\homepage{www.delacruzoliver.com}                         % optional, remove / comment the line if not wanted
-\social[linkedin]{oliver-de-la-cruz}                        % optional, remove / comment the line if not wanted
-%\social[xing]{john\_doe}                           % optional, remove / comment the line if not wanted
-%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
-\social[github]{oliverdelacruz}                              % optional, remove / comment the line if not wanted
-%\social[gitlab]{jdoe}                              % optional, remove / comment the line if not wanted
-%\social[skype]{jdoe}                               % optional, remove / comment the line if not wanted
+\mobile{(+352) 691 14 08 89}
+%\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 %----------------------------------------------------------------------------------------
 \begin{document}
 \makecvtitle % Print the CV title
-\vspace*{-10mm}
-
-%\section{\LARGE{Summary}}
-%\vspace{2mm}
-%Data scientist with +4 years of experience in implementing data-driven solutions to %deliver valuable insights via machine learning methods, predictive modeling and data %visualization. A dynamic professional with a proven track record of building large %scale end-to-end applications using cloud computing to solve complex business %problems and find opportunities to improve profits. 
 
 \section{\LARGE{Education}}
 \vspace{2mm}
-\cventry
-	{October 2016 -- November 2018}
-	{Master of Science in Statistics, Data Science}
-	{Swiss Federal Institute of Technology, ETH Zurich}
-	{Switzerland}{}
-	{Honors: Cum Laude} %Rank: 3\textsuperscript{th}/35} % Arguments not required can be left empty
+\cventry{October 2016 -- Present}{Master of Science in Statistics, Data Science}{Swiss Federal Institute of Technology, ETH Zurich}{Switzerland}{}{Honors: Magna Cum Laude, Rank: 36\textsuperscript{th}/263} % Arguments not required can be left empty
 \vspace{2mm}
-\cventry
-	{September 2011 -- September 2013}
-	{Master of Science in Finance, Financial Engineering and Risk Management}
-	{University of Lausanne, HEC Lausanne}{Switzerland}{}
-	{Exchange Program in U.S: MFE - Claremont Graduate University - Fall 2012
-	\newline Honors: Cum Laude} %Rank: {5\textsuperscript{th}/67}} % Arguments not required can be left empty
+\cventry{September 2011 -- September 2013}{Master of Science in Finance, Financial Engineering and Risk Management}{University of Lausanne, HEC Lausanne}{Switzerland}{}{Exchange Program in U.S: MFE - Claremont Graduate University - Fall 2012
+\newline Honors: Cum Laude, Rank: {5\textsuperscript{th}/67}} % Arguments not required can be left empty
 \vspace{2mm}
-\cventry
-	{September 2008 -- September 2011}
-	{Bachelor of Science in Economics and Management, Econometrics}
-	{University of Luxembourg}
-	{Luxembourg}{}
-	{Exchange Program in Sweden: B.Sc in Economics - Örebro University - Fall 2010
-	\newline  Honors: Magna Cum Laude} %, Rank: {3\textsuperscript{rd}/88}}  % Arguments not required can be left empty
-%\vspace{2mm}
-%\cventry
-%	{September 2006 -- September 2008}
-%	{European Baccalaureate in Mathematics, Physics and Economics}
-%	{European School of Luxembourg}
-%	{Luxembourg}{}
-%	{Honors: Magna Cum Laude, Rank: 36\textsuperscript{th}/263}  % Arguments not required can be left empty
+\cventry{September 2008 -- September 2011}{Bachelor of Science in Economics and Management, Econometrics}{University of Luxembourg}{Luxembourg}{}{Exchange Program in Sweden: B.Sc in Economics - Örebro University - Fall 2010
+\newline  Honors: Magna Cum Laude, Rank: {3\textsuperscript{rd}/88}}  % Arguments not required can be left empty
+\vspace{2mm}
+\cventry{September 2006 -- September 2008}{European Baccalaureate in Mathematics, Physics and Economics}{European School of Luxembourg}{Luxembourg}{}{Honors: Magna Cum Laude, Rank: 36\textsuperscript{th}/263} 
 
 \section{\LARGE{Professional Experience}}
 \vspace{2mm}
-\cventry
-	{October 2017 -- February 2018}
-	{Data Scientist Intern}
-	{\textsc{Amazon EU - Supply Chain Research}}
-	{Luxembourg}{}
-	{
-	Conducted a research project on unsupervised machine learning methods to discover patterns for time series data using deep learning algorithms with Tensorflow and cloud computing leading to a cost reduction in inventory placement by 10\%. 
-	\vspace{1mm}
-	\begin{itemize}
-		\item Provided technical expertise on RDBMS and administered a columnar petabyte-scale data warehouse in Redshift
-		\item Trained a Deep Embedded Clustering to learn feature representations and cluster assignments for outlier detection
-		\item Sustained product selection by predicting out out-of-stock events with  regularized regression and data mining techniques
-		\item Engineered robust data integration (ETL) pipelines with Spark and plotted the output with Javascript to perform deep dives
-		\item Architected and deployed an service infrastructure utilizing containers and several AWS stack to build large scale applications
-		\vspace{2mm}
-	\end{itemize}
-	} 
-\cventry
-	{October 2013 -- October 2016}
-	{Senior Quantitative Analyst}
-	{\textsc{Ernst \& Young - Quantitative Advisory Services}}
-	{Luxembourg}{}
-	{
-	Boosted revenues by 2MM through the launch of a cloud business intelligence platform offering digital solutions with interactive data visualization, while expanding the range of valuation services for derivative products using internal models.
-	\vspace{1mm}
-	\begin{itemize}
-		\item Validated and monitored Value at Risk models for hedge funds and banks across Europe
-		\item Generated ad hoc reports to gain insights on credit risk, factor sensibilities and stress testing
-		\item Developed an end-to-end application in C++ to price convertible bonds by implementing finite difference methods
-		\item Reviewed portfolio management processes and investment strategies to ensure consistency with the client's risk profile
-		\item Performed predictive analytics by integrating statistical methodologies with Python to determine trends in the fund industry
-		\item Established a database to compute the retrocessions fees for a client and programmed in SQL to estimate the profit margins
-%		\item Simulated returns in Monte-Carlo scheme with an enhanced Heston non-parametric local volatility model for option pricing 
-		\vspace{2mm}
-	\end{itemize}
-	} 
-\cventry
-	{February 2013 -- July 2013}
-	{Analyst Intern}
-	{\textsc{European Investment Bank - Finance Directorate}}
-	{Luxembourg}{}
-	{
-	Improved the automation of the bank's dashboard by creating a web-based software that gathers key statistics and measurable KPIs which led to a cut in half of the time required to assess the market risk held in the trading book.
-	\vspace{1mm}
-	\begin{itemize}
-		\item Designed hedging and investment strategies to reduce exposure to risk factors using derivatives
-		\item Performed daily market risk analysis of fixed-income securities in line with the executive management's reporting needs
-		\item Identified data quality issues, upgraded business processes and executed cash reconciliation between the front and back office
-		\vspace{2mm}
-	\end{itemize}
-	}
-\cventry
-	{August 2011 -- August 2011}
-	{Summer Intern}
-	{\textsc{Société Générale - Asset Management \& Private Banking}}{Luxembourg}{}
-	{
-	Increased the efficiency of data storage with proper indexing, enhanced the in-house information retrieval methods and updated the user interface design, resulting in a 50\% increase in usability for non-technical staff members. 
-	\vspace{1mm}
-	\begin{itemize}
-		\item Prepared presentations analyzing major net asset value fluctuations of institutional funds to support investment decision-making
-		\item Created a VBA tool and incorporated stored procedures in MS SQL server in order to facilitate the task of data processing
-		\vspace{2mm}
-	\end{itemize}
-	}
-\cventry
-	{July 2011 \& September 2011 }
-	{Summer Intern}
-	{\textsc{SES Satellite Communications Services - Internal Audit}}
-	{Luxembourg}{}
-	{
-	Assisted with the drafting of the annual report delivered to the Board of Directors of the world's second largest satellite operator.\vspace{1mm}
-	\begin{itemize}
-		\item Overhauled audit procedures and compliance with accounting policies
-		\item Implemented an effective program to monitor crucial metrics and identify red flags regarding financial transactions
-		\vspace{2mm}
-	\end{itemize}
-	}
-\cventry
-	{May 2011 -- June 2011}
-	{Part-Time Research Assistant}
-	{\textsc{University of Luxembourg - Centre for Research in Economic Analysis}}
-	{Luxembourg}{}
-	{
-	Accelerated the process of market data collection by introducing a web crawler and applied econometrics for efficient portfolio allocation to support future academic research in predictive modelling. 
-	\vspace{1mm}
-	\begin{itemize}
-		\item Conducted periodic backtesting, evaluation and optimization of stock selection models
-		\item Analyzed the financial statements of EU companies and constructed optimal portfolios to beat the Euro Stoxx 50 benchmark
-	\end{itemize}
-	}
-
+\cventry{October 2017 -- February 2018}{Data Scientist Intern}{\textsc{Amazon EU - Supply Chain Research}}{Luxembourg}{}{Conducted a research project on unsupervided machine learning methods to discover patterns for time series data using deep learning algorithms and cloud computing. 
+\vspace{1mm}
+\begin{itemize}
+\item Built robust and scalable data integration (ETL) pipelines with SQL, Python and Spark
+\item Engineered as a solution architect a web application in a secured Virtual Private Cloud with a multilayered architecture.
+\item Provided technical expertise on RDBMS and administered a columnar petabyte-scale data warehouse in AWS (Redshift).
+\item Trained a Deep Embedded Clustering, a method that simultaneously learns feature
+representations and cluster assignments
+\vspace{2mm}
+\end{itemize}} 
+\vspace{2mm}
+\cventry{October 2013 -- October 2016}{Senior Quantitative Analyst}{\textsc{Ernst \& Young - Quantitative Advisory Services }}{Luxembourg}{}{Performed independent valuation mainly for the fund industry on a wide array of over-the-counter derivative products using internal models and contributed to the successful IT setup of a web-based business intelligence platform offering interactive market analytics worth five millions.
+\vspace{1mm}
+\begin{itemize}
+\item Validated and monitored Value at Risk models for hedge funds and banks across Europe
+\item Generated ad hoc reports to gain insights on credit risk, factor sensibilities and stress testing
+\item Developed an application in Matlab to price convertible bonds by implementing finite difference methods
+\item Reviewed portfolio management processes and investment strategies to ensure consistency with the client's risk profile
+\item Performed data analytics by integrating statistical methodologies with Python to determine trends in the fund industry
+\item Set up of a database to compute the retrocessions for a banking client and programmed in SQL to estimate the profit margins
+\item Simulated returns in Monte-Carlo scheme with an enhanced Heston non-parametric local volatility model for option pricing 
+\vspace{2mm}
+\end{itemize}} 
+\cventry{February 2013 -- July 2013}{Analyst Intern}{\textsc{European Investment Bank - Finance Directorate}}{Luxembourg}{}{Improved the automation of the bank's dashboard by creating a software and coordinated the asset \& liability management project across departments to assess the systematic risk in the trading book.
+\vspace{1mm}
+\begin{itemize}
+\item Provided executive management with daily market risk reporting for fixed income securities
+\item Designed hedging and investment strategies to reduce exposure to risk factors using derivatives
+\item Identified data quality issues, upgraded business processes and executed cash reconciliation between the front and back office
+\vspace{2mm}
+\end{itemize}}
+\cventry{August 2011 -- August 2011}{Summer Intern}{\textsc{Société Générale - Asset Management \& Private Banking}}{Luxembourg}{}{Increased the efficiency of data storage, enhanced the information retrieval methods in place and prepared presentations analyzing major net asset value fluctuations of institutional funds.
+\vspace{1mm}
+\begin{itemize}
+\item Created a VBA tool in order to facilitate the task of data processing 
+\item Maintained an up-to-date database for mutual funds, private equity funds and hedge funds
+\end{itemize}}
+\vspace{2mm}
+\cventry{July 2011 \& September 2011 }{Summer Intern}{\textsc{SES Satellite Communications Services - Internal Audit}}{Luxembourg}{}{Assisted with the drafting of the annual report delivered to the Board of Directors of the world's second largest satellite operator.\vspace{1mm}
+\begin{itemize}
+\item Overhauled audit procedures and compliance with policies
+\item Implemented an effective program to monitor key metrics and identify adverse trends and opportunities for improvement
+\end{itemize}}
+\vspace{2mm}
+\cventry{May 2011 -- June 2011}{Part-Time Research Assistant}{\textsc{University of Luxembourg - Centre for Research in Economic Analysis}}{Luxembourg}{}{Collected market data and applied econometrics for efficient portfolio allocation to support future academic research.
+\vspace{1mm}
+\begin{itemize}
+\item Conducted periodic backtesting, evaluation and optimization of stock selection models
+\item Analyzed the financial statements of EU companies and constructed optimal portfolios to beat the Euro Stoxx 50 benchmark
+\end{itemize}}
 \section{\LARGE{Languages}}
 \vspace{2mm}
-\cvitem{English}{Fluent (C2)}
-\cvitem{French:}{Bilingual (C2)}
 \cvitem{Spanish}{Mother tongue (C2)}
+\cvitem{French:}{Bilingual (C2)}
+\cvitem{English}{Fluent (C2)}
 
-\section{\LARGE{Skills}}
+\section{\LARGE{IT Skills}}
 \vspace{2mm}
-\begin{minipage}[c]{0.7\linewidth}
-	\cvitem{Programming Languages}{Python, R, C++, Scala, Matlab, SQL, JavaScript}	
-	\cvitem{Libraries}{Numpy, Pandas, Scikit-Learn, Tensorflow, Caret, Ggplot2, Plotly}
-	\cvitem{Big Data}{Hadoop MapReduce, Apache Spark, Hbase, Hive, MongoDB}
-	\cvitem{Databases}{PostgreSQL, SQL server, MySQL, Redshift}
-	\cvitem{Web technologies}{HTML, CSS, jQuery, AJAX, XML, JSON}
-	\cvitem{Frameworks}{Django, React, Angular, Shiny, Bootstrap}
-	\cvitem{Software Development Tools}{Git, Github, Docker, Tmux}
-	\cvitem{Operating systems}{Microsoft Windows, Apple Mac OS X, Linux}
-	\cvitem{AWS}{EC2, S3, VPC, IAM, RDS, ELB, Elastic Beanstalk, CloudFormation}
-\end{minipage} % no space if you would like to put them side by side
-\begin{minipage}[c]{0.3\linewidth}
-	\centering
-	\begin{center}
-			\smartdiagramset{
-			bubble center node color = cyan,
-			bubble center node font = \small\color{white},
-			bubble node font = \scriptsize,
-			bubble center node size=1cm,
-			distance center/other bubbles = 0.4cm,
-			bubble node size =0.5cm,
-		}
-		\tikzset{
-			bubble node/.append style={
-				text width=1.6cm,
-				align=center}
-		}
-		\smartdiagram[bubble diagram]{
-			Data \\ Science,
-			Machine Learning,
-			Data Mining,
-			Statistics,
-			Databases,
-			Data Visualization,
-			Software Engineering
-		}
-	\end{center}
-	\vspace{-2mm}	
-\end{minipage}
+\cvitem{Programming Languages}{R, Python, C++, Matlab, SQL, JavaScript}
+\cvitem{Web \& Big Data technologies}{HTML, CSS, jQuery, Ajax, Spark, HBase}
+\cvitem{Applications}{Bloomberg, Microsoft Office, GitHub, Tensorflow}
+\cvitem{Databases}{Microsoft SQL Server, MySQL, PostgreSQL, Redshift}
+\cvitem{Frameworks}{Django, Node.js, Wordpress}
+\cvitem{Operating systems}{Windows, Linux}
 
 \section{\LARGE{Research \& Projects}}
 \vspace{2mm}
-\cventry{}
-{\vspace{-0.4cm}}
-{\textsc{Deep Reinforcement Learning for Autonomous Exploration, Master Thesis}}{November 2018}{}
-{
-	The thesis proposes deep reinforcement learning methods that are able to navigate in complex unknown environments attaining a performance close to human-level intelligence. 		
+\cventry{}{\vspace{-0.4cm}}{\textsc{Conversational Agent}}{}{}{The task is to build a simple dialogue system that can handle real-world
+	conversations. Starting from a simple Seq2Seq implementation, one needs to identify at least one limitation of the baseline and propose, implement and evaluate an extension that tackles the identified problem. 
 	\vspace{1mm}
 	\begin{itemize}
-		\item Included auxiliary tasks in the loss function to deal with the sparsity of the rewards and extract meaningful features
-		\item Parallelized policy gradient methods to run in distributed systems using asynchronous optimization with multiple GPUs 
-		\item Integrated an external memory which acts as an internal representation of the map
-		\vspace{2mm}			
-	\end{itemize}
-}
-
-\cventry{}
-	{\vspace{-0.4cm}}
-	{\textsc{Conversational Agent, Project}}{July 2017}{}
-	{
-	The task was to build a simple dialogue system that can handle real-world conversations. Starting from a simple Seq2Seq implementation, one needs to identify limitations of the baseline and suggest extensions that tackle speficic problems. 
-	\vspace{1mm}
-	\begin{itemize}
-		\item Programmed an local attention and copying mechanism with a LSTM 4-layer neural network
-		\item Applied reinforcement learning to produce better answers
+		\item Programmed an local attention mechanism with a LSTM 4-layer neural network
+		\item Added a copying mechanism for Seq2Seq to combat UNK issues
+		\item Applied Reinforcement Learning to produce better answers
 		\vspace{2mm}	
-	\end{itemize}
-	}
-\cventry{}
-	{\vspace{-0.4cm}}
-	{\textsc{Sentiment Analysis, Project}}{June 2017}{}
-	{
-	The task was to classify whether a tweet message posted by a user contained a positive or negative smiley by only considering the rest of the text. A multi-step method was developed consisting of preprocessing, word-vector embeddings, and classification using deep learning. 
+\end{itemize}}
+\cventry{}{\vspace{-0.4cm}}{\textsc{Sentiment Analysis}}{}{}{
+	The task of the competition is to predict if a tweet message used to contain a positive or negative smiley	by considering only the remaining text.	
+	We developed a multi-step method for sentiment analysis	of tweets, consisting of preprocessing, word-vector embeddings, and classification using deep learning. 
 	\vspace{1mm}
 	\begin{itemize}
-		\item Parsed sentences to build dependecy trees and estimated word embeddings with Word2vec or Glove approaches
-		\item Calibrated a 3-layer convolutional neural network with max pooling and batch-normalization
+		\item Calibrated a a 3-layer convolutional neural network with max pooling
+		\item Trained word embeddings with Word2vec and Glove approaches
+		\item Parsed sentences to build dependecy trees
 		\vspace{2mm}	
-	\end{itemize}
-	}
-\cventry{}
-	{\vspace{-0.4cm}}
-	{\textsc{Dynamic Factor Models for Asset and Liability Management, Master Thesis}}{September 2013}{}
-	{
-	The paper advocates term structure models which parsimoniously exploits  unobserved information with the objective of forecasting interest rates and predicting future bond prices.	
+\end{itemize}}
+\cventry{}{\vspace{-0.4cm}}{\textsc{Master Thesis}}{}{}{
+	The paper advocates term structure models which parsimoniously exploits  unobserved information with the objective of forecasting interest rates.	
 	\vspace{1mm}
 	\begin{itemize}
-		\item Formulated a Vector autoregression (VAR) model to capture linear interdependencies among multiple time series
 		\item Applied dimensionality reduction techniques to large number of macroeconomic variables
-		\item Developed a Kalman Filter algorithm to estimate the latent yield curve factors	
+		\item Developed a Kalman Filter Factor algorithm to estimate the latent yield curve factors	
+		\item Formulated a Vector autoregression (VAR) model to capture linear interdependencies among multiple time series.
 		\vspace{2mm}	
-	\end{itemize}
-	}
-
+\end{itemize}}
 \section{\LARGE{Activities \& Achievements}}
 \vspace{2mm}
-\cvitem{Leadership}{Organized conferences, presentations and events for the Alternative Summit in Las Vegas (2016)} 
-%\cvitem{Awards}{Co-winner of Stock Market Trading Game competition}
-\cvitem{Certifications}{Passed CFA Level II (2016)}
+\cvitem{Leadership}{Organized conferences, presentations and events for the Alternative Summit in Las Vegas}
+\cvitem{Awards}{Co-winner of Stock Market Trading Game competition}
+\cvitem{Certifications}{Passed CFA Level II}
+
+
+
+
+
 %--------------------------------------------------------------------
 \end{document}
